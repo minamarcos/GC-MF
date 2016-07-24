@@ -1,0 +1,499 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+ <!-- Function - HTML Text Area -->
+                <style type="text/css" media="screen">
+                    #instashow-main {
+                        width: 345px;
+                        height: 440px;
+                    }
+                    
+                    .black-h2-span {
+                        /* margin-left: -105px !important;*/
+                        text-align: left;
+                    }
+                    
+                    #breadcrumbs {
+                        display: none;
+                    }
+                    
+                    #Namm-Top-Nav-wrapper {
+                        position: relative;
+                        height: 90px;
+                    }
+                    
+                    #Namm-Top-Nav-Main {
+                        background: url('http://static.guitarcenter.com/static/gc/lpages/collection/2016/Namm/images/NavBarBG.jpg');
+                        position: absolute;
+                        text-align: center;
+                        background-repeat: repeat-x;
+                        left: 0;
+                        height: 92px;
+                    }
+                    
+                    .isMobile #Namm-Top-Nav-Main {
+                        display: none;
+                    }
+                    
+                    #Namm-Top-Nav {
+                        width: 990px;
+                        background-repeat: repeat-x;
+                        left: 400px;
+                        height: 92px;
+                        padding-top: 15px;
+                        margin: 0 auto;
+                        /* position: absolute; */
+                        margin-top: -11%;
+                    }
+                    
+                    .isDesktop #Namm_Top_Banner {
+                        height: 680px;
+                    }
+                    
+                    #globalPencilBanner,
+                    #mainPageHeader,
+                    .breadcrumbs {
+                        display: none;
+                    }
+                    
+                    .arrow-right {
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-top: 10px solid #CD0001;
+                        top: 16px;
+                        position: relative;
+                        left: 7px;
+                    }
+                    
+                    .black-h2-span,
+                    .red-h2-span {
+                        float: none;
+                        text-transform: capitalize;
+                        margin: 0px !important;
+                        font-family: gibsonbold;
+                        font-size: 55px;
+                        font-weight: 900;
+                    }
+                    
+                    .red-p-lable {
+                        padding: 10px;
+                        background: #cc0001;
+                        color: #ffffff;
+                        text-align: left;
+                        margin-left: 32px !important;
+                        margin-top: 21px;
+                        height: 39px;
+                        width: 251px !important;
+                        padding: 3px;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                    
+                    .red-h2-span {
+                        color: #cd0001;
+                        width: 285px;
+                        height: 50px;
+                        text-align: left;
+                        margin-left: -8px !important;
+                    }
+                    
+                    .light-h2-span {
+                        text-align: center;
+                        font-size: 32px;
+                        margin-top: 14px;
+                    }
+                    
+                    .youtube-inesting {
+                        position: relative;
+                        height: 515px;
+                        top: 100px;
+                        left: 0px;
+                    }
+                    
+                    .shop_all {
+                        color: #CD0001;
+                        font-size: 18px;
+                        margin-top: 10px;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                    
+                    #inesting-right {
+                        background-color: #000;
+                        text-align: center;
+                        height: 507px;
+                        margin-top: 5px;
+                    }
+                    
+                    .isMobile #inesting-right {
+                        height: auto;
+                    }
+                    
+                    #nav-dt {
+                        position: relative;
+                        height: 55px;
+                        top: 110px;
+                        width: 975px;
+                        left: 0px;
+                    }
+                    
+                    .isMobile #nav-dt {
+                        height: auto !important;
+                        top: 12px;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    
+                    .isMobile .youtube-inesting {
+                        position: none;
+                        height: auto !important;
+                        top: 0px;
+                        background: #efefef;
+                        width: 104%;
+                        margin-left: -2%;
+                    }
+                    
+                    #nav-dt a {
+                        text-transform: uppercase;
+                        background-color: #000;
+                        font-weight: 900;
+                        color: #fff;
+                        text-align: center;
+                        font-size: 20px;
+                        font-family: gibsonbold;
+                        height: 40px;
+                        padding-top: 5px;
+                        margin-left: 0px;
+                        cursor: pointer;
+                        text-decoration: none;
+                        border-right: 1px solid #3c3c3c;
+                    }
+                    
+                    .nav-dt-mobile {
+                        min-height: 10vw;
+                    }
+                    
+                    .nav-dt-mobile a {
+                        text-transform: uppercase;
+                        background-color: #000;
+                        font-weight: 900;
+                        color: #fff !important;
+                        text-align: center;
+                        font-size: 3vw;
+                        font-family: gibsonregular;
+                        height: auto;
+                        margin-left: 0px;
+                        border: 1px solid #fff;
+                    }
+                    
+                    .isMobile #nav-dt a {
+                        font-size: 3.5vw;
+                        padding: 1vw;
+                    }
+                    
+                    #nav-dt a:hover {
+                        background-color: #ab0900;
+                    }
+                    
+                    .tri-nav-active {
+                        width: 0;
+                        height: 0;
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        border-top: 20px solid #ab0900;
+                        position: absolute;
+                        top: 33px;
+                        left: 69px;
+                        display: none;
+                    }
+                    
+                    .isMobile .tri-nav-active {
+                        width: 0;
+                        height: 0;
+                        border-left: 2vw solid transparent;
+                        border-right: 2vw solid transparent;
+                        border-top: 2vw solid #ab0900;
+                        position: absolute;
+                        top: 5vw;
+                        display: none;
+                    }
+                    
+                    #searchTabs {
+                        margin-top: 15px;
+                    }
+                    
+                    .isMobile .yesp-container {
+                        width: 100%!important;
+                    }
+                    
+                    .isMobile #Namm-Top-Nav {
+                        display: none;
+                    }
+                    
+                    .isDesktop #atgc-img {
+                        margin-top: 20px;
+                    }
+                    
+                    .isMobile #atgc-img {
+                        margin-top: 20px;
+                    }
+                    
+                    .isMobile #instaShowGallery_1,
+                    .isMobile #playlist {
+                        width: 100% !important;
+                    }
+                    
+                    .isDesktop #Namm_Top_Banner .desktop-only {
+                        display: block;
+                    }
+                    
+                    .isMobile #Namm_Top_Banner .desktop-only {
+                        display: none;
+                    }
+                    
+                    .isDesktop #Namm_Top_Banner .mobile-only {
+                        display: none;
+                    }
+                    
+                    .isMobile #Namm_Top_Banner .mobile-only {
+                        display: block;
+                    }
+                </style>
+
+
+                <script src="http://static.guitarcenter.com/static/gc/Libs/instashow/instashow/jquery.instashow.packaged.js"></script>
+
+                <script src="http://static.guitarcenter.com/static/gc/Libs/instashow/vendors/handlebars.runtime.min.js"></script>
+
+                <script src="http://static.guitarcenter.com/static/gc/Libs/instashow/instashow/jquery.instashow.min.js"></script>
+
+
+
+                <!-- don't forget to set correct path: -->
+                <link href="http://static.guitarcenter.com/static/gc/Libs/instashow/instashow/jquery.instashow.min.css" rel="stylesheet">
+                <!-- Open Sans -->
+                <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
+
+                <!-- Icons -->
+                <link rel="stylesheet" type="text/css" media="screen" href="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/packages/icons/css/icons.min.css" />
+
+                <!-- Main Stylesheet -->
+                <link rel="stylesheet" type="text/css" media="screen" href="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/css/youtube-video-player.min.css" />
+
+
+
+
+                <!-- Main Javascript -->
+                <script type="text/javascript" src="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/js/youtube-video-player.jquery.min.js"></script>
+
+                <!-- Perfect Scrollbar -->
+                <link rel="stylesheet" type="text/css" media="screen" href="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/packages/perfect-scrollbar/perfect-scrollbar.css" />
+                <script type="text/javascript" src="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/packages/perfect-scrollbar/jquery.mousewheel.js"></script>
+                <script type="text/javascript" src="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/packages/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+
+                <div id="Namm-Top-Nav-Main" class="isMobile">
+                </div>
+                <img class="mobile-only" style="width:100%;" src="http://static.guitarcenter.com/static/gc/lpages/collection/2016/Namm/images/Namm-MobileHeader.jpg" alt="">
+
+                <div class="gridRow-fluid youtube-inesting">
+
+                    <div id="Namm-Top-Nav" class="gridRow-fluid">
+                        <span class="black-h2-span span10">NEW FROM</span>
+                        <span class="red-h2-span span6">NAMM</span>
+                        <span class="red-p-lable span3">BE THE FIRST TO PLAY THE HOTTEST GEAR FROM NAMM 2016</span>
+                        <span class="light-h2-span span6">JAN, 21-24</span>
+
+                    </div>
+
+                    <div class="span20 " style=" margin-left: 0px; ">
+                        <div class="span10 desktop-only">
+                            <img src="http://static.guitarcenter.com/static/gc/lpages/collection/2016/Namm/images/GC_NAMM_Video.jpg" alt="">
+                        </div>
+                        <div class="span20 desktop-only">
+                            <p class="shop_all">Shop All NAMM 2016 Products<span class="arrow-right"></span></p>
+                        </div>
+                        <div class="gridRow-fluid">
+                            <div id="playlist"></div>
+                        </div>
+                    </div>
+                    <!-- <img class="mobile-only" style="width:100%;" src="http://static.guitarcenter.com/static/gc/lpages/collection/2016/Namm/images/Namm-loadVideo.jpg" alt=""> -->
+                    <div class="span10" id="inesting-right">
+                        <img src="http://static.guitarcenter.com/static/gc/lpages/collection/2016/Namm/images/GC_NAMM_AtGC.jpg" alt="" id="atgc-img" style="">
+                        <div class="desktop-only" data-is data-is-access-token="53098254.745c638.d9115d56164e401f8f4741c25a818679" data-is-source="@guitarcenter" data-is-width="321px" data-is-height="451px" data-is-columns="3" data-is-rows="4" data-is-gutter="10px"></div>
+                        <div class="mobile-only" data-is data-is-access-token="53098254.745c638.d9115d56164e401f8f4741c25a818679" data-is-source="@guitarcenter" data-is-columns="3" data-is-rows="4" data-is-gutter="2"></div>
+                    </div>
+
+                </div>
+
+
+                <img class="mobile-only" style="width:100%;" src="http://static.guitarcenter.com/static/gc/lpages/collection/2016/Namm/images/Namm-shop.jpg" alt="">
+                <div class="gridRow-fluid scrollhere" id="scrollhere" style="height: 0px;top: 110px;position: relative;"> </div>
+
+                <div class="gridRow-fluid desktop-only" id="nav-dt">
+                    <a href="/NAMM-2016.gc" data-ajax="false" class="span6 namm-nav-1" style="width:20%;">ALL</a>
+                    <a href="/NAMM-2016.gc?N=18144" data-ajax="false" class="span6 namm-nav-2" style="width:20%;">Guitars</a>
+                    <a href="/NAMM-2016.gc?N=18210" data-ajax="false" class="span6 namm-nav-3" style="width:20%;">drums</a>
+                    <a href="/NAMM-2016.gc?N=19614" data-ajax="false" class="span6 namm-nav-4" style="width:20%;">pro audio</a>
+                    <a href="/NAMM-2016.gc?N=18185" data-ajax="false" class="span6 namm-nav-5" style="width:20%;">Keyboards</a>
+                    <span class="tri-nav-active"></span>
+                </div>
+
+                <div class="gridRow-fluid nav-dt-mobile mobile-only ">
+                    <a href="/NAMM-2016.gc" data-ajax="false" class="namm-nav-1" style="width: 98.2%;float: left;">ALL</a>
+                    <a href="/NAMM-2016.gc?N=18144" data-ajax="false" class="namm-nav-2" style="width: 49%;float: left;">Guitars</a>
+                    <a href="/NAMM-2016.gc?N=18210" data-ajax="false" class="namm-nav-3" style="width: 49%;float: left;">drums</a>
+                    <a href="/NAMM-2016.gc?N=19614" data-ajax="false" class="namm-nav-4" style="width: 49%;float: left;">pro audio</a>
+                    <a href="/NAMM-2016.gc?N=18185" data-ajax="false" class="namm-nav-5" style="width: 49%;float: left;">Keyboards</a>
+                    <span class="tri-nav-active"></span>
+                </div>
+
+
+
+
+                <div class="gridRow-fluid" id="divider" style="height:30px;">
+                </div>
+
+                <script>
+                    if (pageData.isMobile == "true") {
+                        //console.log("isMobile is true");
+                        $(document).on('pagebeforeshowPostload', '#productListingsPage', function() {
+                            console.log("it is   isMobile ");
+                            var namm = $(this).find('#Namm_Top_Banner');
+                            if (!namm.length) return;
+
+                            pageInitFunction(namm);
+                        });
+                    } else {
+                        $(function() {
+                            console.log("it is   desktop");
+                            pageInitFunction($(document));
+                        });
+                    }
+
+
+                    function pageInitFunction() {
+
+
+                        $('#nav-dt').next(".gridRow").css("margin-top", "25px");
+                        var windowWidth = $('#header_tools').width();
+                        console.log("windowWidth:" + windowWidth);
+                        $('#Namm-Top-Nav-Main').css('width', windowWidth);
+
+
+
+
+                        $(window).resize(function() {
+                            $('#Namm-Top-Nav-Main').css('width', $(window).width());
+                            $('#Namm-Top-Nav-Main').css('min-width', '976px');
+                        });
+
+
+
+
+                        $('.isMobile #playlist').css("width", "100%");
+
+                        $('.shop_all').click(function(event) {
+                            scrollto('.scrollhere');
+                        });
+
+
+                        $("#playlist").youtube_video({
+                            playlist: 'PLgcs1OjW_tDU-bMrFiWlihejhR6m0xTVG',
+                            channel: false,
+                            user: false,
+                            videos: false,
+                            max_results: 8,
+                            shuffle: false,
+                            pagination: true,
+                            continuous: true,
+                            first_video: 0,
+                            show_playlist: 'auto',
+                            playlist_type: 'horizontal',
+                            show_channel_in_playlist: true,
+                            show_channel_in_title: true,
+                            width: 650,
+                            show_annotations: false,
+                            now_playing_text: 'Now Playing',
+                            load_more_text: 'Load More',
+                            autoplay: false,
+                            force_hd: false,
+                            hide_youtube_logo: false,
+                            play_control: true,
+                            time_indicator: 'full',
+                            volume_control: true,
+                            share_control: true,
+                            fwd_bck_control: true,
+                            youtube_link_control: true,
+                            fullscreen_control: true,
+                            playlist_toggle_control: true,
+                            volume: 100,
+                            show_controls_on_load: true,
+                            show_controls_on_pause: true,
+                            show_controls_on_play: false,
+                            player_vars: {},
+                            colors: {},
+
+                            on_load: function() {},
+                            on_done_loading: function() {},
+                            on_state_change: function() {},
+                            on_seek: function() {},
+                            on_volume: function() {},
+                            on_time_update: function() {},
+                        });
+                        set_nav_active();
+                    }
+
+                    function set_nav_active() {
+
+                        console.log("Parame:" + Parame);
+                        var Parame = getParameterByName('N');
+                        // console.log("parame:"+Parame);
+                        if (Parame == "18144") {
+                            $('.isDesktop .tri-nav-active').css('left', '270px');
+                            $('.isMobile .tri-nav-active').css('display', 'none');
+                            $('.namm-nav-2').css('background-color', '#ab0900');
+                            scrollto('.scrollhere');
+                        }
+                        if (Parame == "18210") {
+                            $('.isDesktop .tri-nav-active').css('left', '470px');
+                            $('.isMobile .tri-nav-active').css('display', 'none');
+                            $('.namm-nav-3').css('background-color', '#ab0900');
+                            scrollto('.scrollhere');
+                        }
+                        if (Parame == "19614") {
+                            $('.isDesktop .tri-nav-active').css('left', '670px');
+                            $('.isMobile .tri-nav-active').css('display', 'none');
+                            $('.namm-nav-4').css('background-color', '#ab0900');
+                            scrollto('.scrollhere');
+                        }
+                        if (Parame == "18185") {
+                            $('.isDesktop .tri-nav-active').css('left', '850px');
+                            $('.isMobile .tri-nav-active').css('display', 'none');
+                            $('.namm-nav-5').css('background-color', '#ab0900');
+                            scrollto('.scrollhere');
+                        }
+                        $('.isDesktop .tri-nav-active').css('display', 'block');
+
+                        if (Parame == '') {
+                            $('.namm-nav-1').css('background-color', '#ab0900');
+                            $('.tri-nav-active').css('display', 'none');
+                        }
+                    }
+
+                    function getParameterByName(name) {
+                        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                            results = regex.exec(location.search);
+                        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                    }
+
+                    function scrollto(classname) {
+                        setTimeout(function() {
+                            $('html,body').stop().animate({
+                                scrollTop: $(classname).offset().top
+                            });
+                        }, 4000);
+                    }
+                </script>

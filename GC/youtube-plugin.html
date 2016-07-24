@@ -1,0 +1,68 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+
+<!-- Icons -->
+<link rel="stylesheet" type="text/css" media="screen" href="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/packages/icons/css/icons.min.css" />
+<!-- Main Stylesheet -->
+<link rel="stylesheet" type="text/css" media="screen" href="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/css/youtube-video-player.min.css" />
+<!-- Main Javascript -->
+<script type="text/javascript" src="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/js/youtube-video-player.jquery.min.js"></script>
+<!-- Perfect Scrollbar -->
+<link rel="stylesheet" type="text/css" media="screen" href="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/packages/perfect-scrollbar/perfect-scrollbar.css" />
+<script type="text/javascript" src="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/packages/perfect-scrollbar/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="http://static.guitarcenter.com/static/gc/Libs/youtube-video-player/packages/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+
+
+
+                 <div id="playlist"></div>
+
+
+ <script>
+
+ $("#playlist").youtube_video({
+                            playlist: 'PLf7UCObHG14G-5O1NANDOMH2HHpjZUDBo',
+                            channel: false,
+                            user: false,
+                            videos: false,
+                            max_results: 8,
+                            shuffle: false,
+                            pagination: true,
+                            continuous: true,
+                            first_video: 0,
+                            show_playlist: 'auto',
+                            playlist_type: 'horizontal',
+                            show_channel_in_playlist: true,
+                            show_channel_in_title: true,
+                            width: 650,
+                            show_annotations: false,
+                            now_playing_text: 'Now Playing',
+                            load_more_text: 'Load More',
+                            autoplay: false,
+                            force_hd: false,
+                            hide_youtube_logo: false,
+                            play_control: true,
+                            time_indicator: 'full',
+                            volume_control: true,
+                            share_control: true,
+                            fwd_bck_control: true,
+                            youtube_link_control: true,
+                            fullscreen_control: true,
+                            playlist_toggle_control: true,
+                            volume: 100,
+                            show_controls_on_load: true,
+                            show_controls_on_pause: true,
+                            show_controls_on_play: false,
+                            player_vars: {},
+                            colors: {},
+
+                            on_load: function() {},
+                            on_done_loading: function() {},
+                            on_state_change: function() {},
+                            on_seek: function() {},
+                            on_volume: function() {},
+                            on_time_update: function() {},
+                        });
+
+ </script>
